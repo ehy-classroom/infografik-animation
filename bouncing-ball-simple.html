@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infografik Animation | Bouncing Ball einfach</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://rsms.me/">
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+
+
+    <style>
+        .ball {
+            z-index: 2;
+            width: 5em;
+            height: 5em;
+            position: absolute;
+            border-radius: 50%;
+            background: var(--color-accent-100);
+            left: 13em;
+            animation: bounce 1s infinite;
+        }
+
+        .shadow {
+            z-index: 1;
+            width: 5em;
+            height: 5em;
+            position: absolute;
+            border-radius: 50%;
+            background: var(--color-primary-300);
+            top: 10em;
+            left: 13em;
+            animation: shade 1s infinite;
+        }
+
+        @keyframes bounce {
+            0% {
+                top: 1em;
+                transform: scale(1, 1);
+                animation-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
+                /* ease-out */
+            }
+
+            25% {
+                top: 10em;
+                transform: scale(1, 1);
+                animation-timing-function: cubic-bezier(0.42, 0, 1, 1);
+                /* ease-in */
+            }
+
+            50% {
+                top: 10em;
+                transform: scale(2, 0.2);
+
+            }
+
+            75% {
+                top: 1em;
+                transform: scale(0.2, 2);
+                animation-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
+                /* ease-out */
+            }
+
+            100% {
+                top: -1em;
+                transform: scale(1, 1);
+
+            }
+        }
+    </style>
+
+
+
+
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <a href="index.html">
+                <div class="ic-overview">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </a>
+
+            <h1>Bouncing Ball einfach</h1>
+        </div>
+    </header>
+    <main>
+        <section>
+            <div class="container">
+                <div class="stage">
+                    <div class="ball">
+                    </div>
+                    <div class="shadow">
+                    </div>
+                </div>
+        </section>
+    </main>
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Enno Hyttrek | <a href="https://ennohyttrek.de">ennohyttrek.de</a></p>
+        </div>
+    </footer>
+    <script src="scripts.js"></script>
+</body>
+
+</html>
