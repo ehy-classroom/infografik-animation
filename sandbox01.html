@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infografik Animation | Bouncing Ball einfach</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://rsms.me/">
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.6.0/css/fontawesome.min.css">
+
+
+    <style>
+        .sq-container {
+            /* animation: move-01 10s linear infinite; */
+            position: absolute;
+            left: 50%;
+            top: 160px;
+        }
+
+        .square {
+            position: absolute;
+            width: 20px;
+            height: 100px;
+            border-radius: 10px;
+            background: red;
+            transform-origin: 50% 0%;
+            animation: rotate-01 5s linear infinite;
+        }
+
+        @keyframes move-01 {
+            0% {
+                left: 50%;
+                top: 160px;
+            }
+
+            25% {
+                left: 400px;
+                top: 0;
+            }
+
+            50% {
+                left: 100px;
+                top: 100px;
+                transform: rotate(720deg);
+            }
+
+            75% {
+                left: 0;
+                top: 100px;
+                
+            }
+
+            100% {
+                left: 50%;
+                top: 160px;
+            }
+        }
+
+        @keyframes rotate-01 {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            50% {
+                background: blue;
+            }
+
+            100% {
+                transform: rotate(360deg);
+                background: red;
+            }
+        }
+    </style>
+
+
+
+
+</head>
+
+<body class="sandbox">
+
+    <div class="stage">
+        <section>
+            <div class="sq-container">
+                <div class="square"></div>
+            </div>
+    </div>
+    </section>
+
+</body>
+
+</html>

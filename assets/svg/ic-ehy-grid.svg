@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="ic-ehy-grid" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 32 32">
+  <!-- Generator: Adobe Illustrator 29.3.1, SVG Export Plug-In . SVG Version: 2.1.0 Build 151)  -->
+  <rect x="11" width="10" height="10" rx="2" ry="2"/>
+  <rect x="22" width="10" height="10" rx="2" ry="2"/>
+  <rect width="10" height="10" rx="2" ry="2"/>
+  <rect x="11" y="11" width="10" height="10" rx="2" ry="2"/>
+  <rect x="22" y="11" width="10" height="10" rx="2" ry="2"/>
+  <rect y="11" width="10" height="10" rx="2" ry="2"/>
+  <rect x="11" y="22" width="10" height="10" rx="2" ry="2"/>
+  <rect x="22" y="22" width="10" height="10" rx="2" ry="2"/>
+  <rect y="22" width="10" height="10" rx="2" ry="2"/>
+</svg>

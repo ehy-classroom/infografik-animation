@@ -1,6 +1,6 @@
 /*---------------------
 Infografik und Animation
-Version: 1.0
+Version: 1.1
 ---------------------*/
 
 /*---------------------
@@ -64,28 +64,17 @@ footer {
 }
 
 main {
-    min-height: 55vh
+    min-height: 68vh
 }
 
 
 /*---------------------
-NAVIGATION
+ICONS
 ---------------------*/
 
-.ic-overview {
-    display: flex;
-    flex-wrap: wrap;
-    width: 35px;
-    height: 35px;
-    gap: 2px;
-    margin-bottom: 2rem;
-}
-
-.ic-overview span {
-    display: inline-block;
-    width: 10px;
-    height: 10px;
-
+.ic {
+    display: block;
+    width: 32px;
 }
 
 
@@ -136,6 +125,10 @@ Color Tokens
     /*Accent*/
     --color-accent-100: hsl(0, 97%, 55%);
 
+    /*Shadow*/
+    --color-shade-100: hsla(199,8%,13%,0.5);
+    --color-shade-200: hsla(199,8%,8%,0.8);
+
 }
 
 
@@ -150,8 +143,14 @@ header {
     background-color: var(--color-primary-300);
 }
 
+body,
 footer {
     background-color: var(--color-primary-600);
+}
+
+
+footer {
+    border-top: 1px solid var(--color-primary-300);
 }
 
 .ic-overview span {
@@ -181,6 +180,19 @@ footer a {
 }
 
 
+/**-----
+Color SVG
+-----**/
+
+header .ic {
+    fill: var(--color-primary-200);
+}
+
+header a:hover .ic {
+    fill: #fff;
+}
+
+
 
 
 /*---------------------
@@ -188,9 +200,32 @@ COMPONENTS
 ---------------------*/
 
 .stage {
-    width: 34em;
-    height: 21em;
+    width: 480px;
+    height: 320px;
     position: relative;
     overflow: hidden;
     background-color: var(--color-primary-100);
 }
+
+
+.ball {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: var(--color-accent-100);
+    box-shadow: inset -3px -5px 15px rgba(0, 0, 0, 0.5);
+}
+
+.shadow {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: var(--color-shade-200);
+    filter: blur(3px);
+}
+
+
+    body.sandbox {
+        padding: 1em;
+        background-color: #fff;
+    }

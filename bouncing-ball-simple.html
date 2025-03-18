@@ -4,67 +4,115 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Infografik Animation | Bouncing Ball einfach</title>
+    <title>Infografik Animation | Bouncing Ball</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://rsms.me/">
     <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
-
+    <link rel="stylesheet" href="/assets/fonts/fontawesome/css/fontawesome.css">
 
     <style>
+        :root {
+            --my-duration: 1s;
+            --key-01: 0%;
+            --key-02: 25%;
+            --key-03: 50%;
+            --key-04: 75%;
+            --key-05: 100%;
+        }
+
+
+
         .ball {
             z-index: 2;
-            width: 5em;
-            height: 5em;
             position: absolute;
-            border-radius: 50%;
-            background: var(--color-accent-100);
-            left: 13em;
-            animation: bounce 1s infinite;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            animation: bounce var(--my-duration) infinite;
         }
 
         .shadow {
             z-index: 1;
-            width: 5em;
-            height: 5em;
             position: absolute;
-            border-radius: 50%;
-            background: var(--color-primary-300);
-            top: 10em;
-            left: 13em;
-            animation: shade 1s infinite;
+            top: 235px;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            animation: shade var(--my-duration) infinite;
+        }
+
+        .ground {
+            z-index: 0;
+            position: absolute;
+            top: 220px;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            height: 200px;
+            background-color: #fff;
         }
 
         @keyframes bounce {
             0% {
-                top: 1em;
+                top: 20px;
                 transform: scale(1, 1);
-                animation-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
-                /* ease-out */
+                animation-timing-function: ease-out;
             }
 
             25% {
-                top: 10em;
+                top: 200px;
                 transform: scale(1, 1);
-                animation-timing-function: cubic-bezier(0.42, 0, 1, 1);
-                /* ease-in */
+                animation-timing-function: ease-in;
             }
 
             50% {
-                top: 10em;
+                top: 220px;
                 transform: scale(2, 0.2);
 
             }
 
             75% {
-                top: 1em;
+                top: 20px;
                 transform: scale(0.2, 2);
-                animation-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
-                /* ease-out */
+                animation-timing-function: ease-out;
             }
 
             100% {
                 top: -1em;
                 transform: scale(1, 1);
+
+            }
+        }
+
+
+        @keyframes shade {
+            0% {
+
+                transform: scale(1, 0.2);
+                animation-timing-function: ease-out;
+            }
+
+            25% {
+
+                transform: scale(1, 0.2);
+                animation-timing-function: ease-in;
+            }
+
+            50% {
+
+                transform: scale(2, 0.2);
+
+            }
+
+            75% {
+
+                transform: scale(0.2, 0.2);
+                animation-timing-function: ease-out;
+            }
+
+            100%{
+
+                transform: scale(1, 0.2);
 
             }
         }
@@ -78,30 +126,32 @@
 <body>
     <header>
         <div class="container">
+
             <a href="index.html">
-                <div class="ic-overview">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
+                <svg id="ic-ehy-grid" class="ic" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 32 32">
+                    <!-- Generator: Adobe Illustrator 29.3.1, SVG Export Plug-In . SVG Version: 2.1.0 Build 151)  -->
+                    <rect x="11" width="10" height="10" rx="2" ry="2" />
+                    <rect x="22" width="10" height="10" rx="2" ry="2" />
+                    <rect width="10" height="10" rx="2" ry="2" />
+                    <rect x="11" y="11" width="10" height="10" rx="2" ry="2" />
+                    <rect x="22" y="11" width="10" height="10" rx="2" ry="2" />
+                    <rect y="11" width="10" height="10" rx="2" ry="2" />
+                    <rect x="11" y="22" width="10" height="10" rx="2" ry="2" />
+                    <rect x="22" y="22" width="10" height="10" rx="2" ry="2" />
+                    <rect y="22" width="10" height="10" rx="2" ry="2" />
+                </svg>
             </a>
 
-            <h1>Bouncing Ball einfach</h1>
+            <h1>Bouncing Ball</h1>
         </div>
     </header>
     <main>
         <section>
             <div class="container">
                 <div class="stage">
-                    <div class="ball">
-                    </div>
-                    <div class="shadow">
-                    </div>
+                    <div class="ball"></div>
+                    <div class="shadow"></div>
+                    <div class="ground"></div>
                 </div>
         </section>
     </main>
@@ -110,7 +160,6 @@
             <p>&copy; 2025 Enno Hyttrek | <a href="https://ennohyttrek.de">ennohyttrek.de</a></p>
         </div>
     </footer>
-    <script src="scripts.js"></script>
 </body>
 
 </html>
